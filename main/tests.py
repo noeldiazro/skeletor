@@ -16,4 +16,4 @@ class HomeTest(TestCase):
         html = response.content.decode('utf-8')
         self.assertTrue(html.startswith('<html>'))
         self.assertIn('<title>Home</title>', html)
-        self.assertTrue(html.endswith('</html>'))
+        self.assertTrue(html.rstrip().endswith('</html>'))
