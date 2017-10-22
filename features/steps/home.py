@@ -3,7 +3,7 @@ from behave import given, when, then
 
 @when('home page is requested')
 def request_home_page(context):
-    context.browser.get('http://localhost:8000')
+    context.browser.get(context.get_url('/'))
 
 
 @then('page title contains "{page_title}"')
